@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Movie Recommendation System</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href = "{{ url_for('static',    filename='css/bootstrap.css') }}" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href = "{{ url_for('static',    filename='css/main.css') }}" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="{{ url_for('static',  filename = 'js/hover.zoom.js') }}"></script>
+    <script src="{{ url_for('static',  filename = 'js/hover.zoom.conf.js') }}"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ url_for('home') }}">Movie Recommender</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<!-- +++++ Welcome Section +++++ -->
+	<div id="ww">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 centered">
+					<img src="{{ url_for('static',    filename='img/user1.png') }}" alt="Recommender">
+					<h1>Hey there! Want me to recommend some Movies for you?</h1>
+					<p>Hello everybody. I'm Recommender, a handsome Recommendation Engine coded by three friends who were tired of the Movie Selection process. I'm a little dumb right now, due to my developers' incompetency, but soon I'll be upgraded.</p>
+					<p>Help me to recommend you a movie and resolve this hectic process of Movie selection, that takes more time than the runtime of the movie itself. So let's start with the first question.</p>
+          <h3>How are you feeling?</h3>
+
+				</div><!-- /col-lg-8 -->
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /ww -->
+
+
+	<!-- +++++ Projects Section +++++ -->
+
+	<div class="container pt">
+		<div class="row mt centered">
+			<div class="col-lg-3">
+				<a class="zoom green" href="{{ url_for('em_angry') }}"><img class="img-thumbnail" src="{{ url_for('static',    filename='img/Emotions/anger.jpg') }}" alt="" /></a>
+				<p>ANGRY</p>
+			</div>
+			<div class="col-lg-3">
+				<a class="zoom green" href="{{ url_for('em_anxious') }}"><img class="img-thumbnail" src="{{ url_for('static',    filename='img/Emotions/anxious.jpg') }}" alt="" /></a>
+				<p>ANXIOUS/ WORRIED</p>
+			</div>
+      <div class="col-lg-3">
+				<a class="zoom green" href="{{ url_for('em_serious') }}"><img class="img-thumbnail" src="{{ url_for('static',    filename='img/Emotions/serious.jpg') }}" alt="" /></a>
+				<p>SERIOUS</p>
+			</div>
+      <div class="col-lg-3">
+				<a class="zoom green" href="{{ url_for('em_excited') }}"><img class="img-thumbnail" src="{{ url_for('static',    filename='img/Emotions/excited1.jpg') }}" alt="" /></a>
+				<p>EXCITED</p>
+			</div>
+		</div><!-- /row -->
+		<div class="row mt centered">
+			<div class="col-lg-3">
+				<a class="zoom green" href="{{ url_for('em_happy') }}"><img class="img-thumbnail" src="{{ url_for('static',    filename='img/Emotions/happy.jpg') }}" alt="" /></a>
+				<p>HAPPY</p>
+			</div>
+			<div class="col-lg-3">
+				<a class="zoom green" href="{{ url_for('em_irritated') }}"><img class="img-thumbnail" src="{{ url_for('static',    filename='img/Emotions/irritated.jpg') }}" alt="" /></a>
+				<p>IRRITATED/ FRUSTATED</p>
+			</div>
+			<div class="col-lg-3">
+				<a class="zoom green" href="{{ url_for('em_lonely') }}"><img class="img-thumbnail" src="{{ url_for('static',    filename='img/Emotions/lonely.png') }}" alt="" /></a>
+				<p>LONELY</p>
+			</div>
+      <div class="col-lg-3">
+				<a class="zoom green" href="{{ url_for('em_relaxed') }}"><img class="img-thumbnail" src="{{ url_for('static',    filename='img/Emotions/relaxed.jpg') }}" alt="" /></a>
+				<p>RELAXED</p>
+			</div>
+		</div><!-- /row -->
+    <div class="row mt centered">
+			<div class="col-lg-3">
+				<a class="zoom green" href="{{ url_for('em_nothing') }}"><img class="img-thumbnail" src="{{ url_for('static',    filename='img/Emotions/nothing1.jpg') }}" alt="" /></a>
+				<p>FEELING NOTHING</p>
+			</div>
+			<div class="col-lg-3">
+				<a class="zoom green" href="{{ url_for('em_romantic') }}"><img class="img-thumbnail" src="{{ url_for('static',    filename='img/Emotions/romantic.png') }}" alt="" /></a>
+				<p>ROMANTIC</p>
+			</div>
+			<div class="col-lg-3">
+				<a class="zoom green" href="{{ url_for('em_sad') }}"><img class="img-thumbnail" src="{{ url_for('static',    filename='img/Emotions/sad.jpg') }}" alt="" /></a>
+				<p>GLOOMY/ SAD</p>
+			</div>
+      <div class="col-lg-3">
+				<a class="zoom green" href="{{ url_for('gen_all') }}"><img class="img-thumbnail" src="{{ url_for('static',    filename='img/Emotions/confused.jpg') }}" alt="" /></a>
+				<p>CONFUSED</p>
+			</div>
+		</div><!-- /row -->
+	</div><!-- /container -->
+
+
+	<!-- +++++ Footer Section +++++ -->
+
+	<div id="footer">
+		<div class="container">
+      <div class="row mt centered">
+        <h2>Let your Emotions make your Decisions</h2>
+        <p>-Recommender</p>
+      </div>
+		</div>
+	</div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ url_for('static',  filename = 'js/bootstrap.min.js') }}"></script>
+  </body>
+</html>
