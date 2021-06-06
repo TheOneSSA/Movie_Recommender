@@ -3,7 +3,7 @@ An interactive movie recommendation system that recommends the user top movies b
 Here's the dataset we collected from different sources: https://github.com/TheOneSSA/IMDb_Movies_Datasets
 
 For deployment, we used Flask web framework and the Heroku platform.
-Link to the web application :- https://project-movie-recommender.herokuapp.com/
+Link to the web application :- https://project-movie-recommender.herokuapp.com/ (some features aren't working properly, as Heroku has a 512 MB dyno limit under free subscription, but it will run properly on deploying on your local machine, with RAM >= 2 GB)
 
 # Files Brief
 
